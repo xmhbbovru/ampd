@@ -1,4 +1,4 @@
-cc/README.md rev. 01 January 2014 by Stuart Ambler.
+README.md rev. 01 January 2014 by Stuart Ambler.
 Copyright (c) 2014 Stuart Ambler.
 Distributed under the Boost License in the accompanying file LICENSE.
 
