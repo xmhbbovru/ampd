@@ -1,4 +1,4 @@
-README.md rev. 01 January 2014 by Stuart Ambler.
+README.md rev. 02 January 2014 by Stuart Ambler.
 Copyright (c) 2014 Stuart Ambler.
 Distributed under the Boost License in the accompanying file LICENSE.
 
@@ -14,7 +14,9 @@ main function with a number of parameters for generation of test data and a few
 parameters for operation of algorithm.  The test outputs command and data files
 for gnuplot; tested with version 4.6 patchlevel 3.  Environment lubuntu 13.10,
 intel processor, 8 GB RAM.  Requires installation of argtable2; tested with
-version 12-1.
+version 12-1.  Build script usage:
+
+buildcc11 ampd
 
 Since the program writes a number of output files with long filenames including
 all the command line parameters or defaults used, it may be best to create a
