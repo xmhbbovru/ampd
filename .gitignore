@@ -1,0 +1,25 @@
+# .gitignore rev. 02 January 2014 by Stuart Ambler.
+# Copyright (c) 2014 Stuart Ambler.
+# Distributed under the Boost License in the accompanying file LICENSE.
+
+buildeg
+rebuildeg
+README.html
+ampd
+/ampd1
+/ampd2
+/ampd7
+/ampd8
+/ampd9
+/ampd10
+/ampd11
+/ampd12
+/ampd13
+/ampd14
+/ampd15
+/ampd16
+/ampd17
+/ampd18
+/ampd19
+/ampd20
+/ampd21

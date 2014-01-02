@@ -1,0 +1,1 @@
+g++ -std=c++11 $1.cc -lpthread -largtable2 -o $1
