@@ -1,4 +1,4 @@
-// ampd.cc rev. 02 Jan 2014 by Stuart Ambler.  Implements automatic
+// ampd.cc rev. 03 Jan 2014 by Stuart Ambler.  Implements automatic
 // multiscale-based peak detection (AMPD) algorithm as in An Efficient
 // Algorithm for Automatic Peak Detection in Noisy Periodic and Quasi-Periodic
 // Signals, by Felix Scholkmann, Jens Boss and Martin Wolf, Algorithms 2012, 5,
@@ -447,13 +447,17 @@ AmpdReturn ampd(Vad x, double alg_mean, double alg_stdev,
     gamma.close();
 
     ofstream peaks(peaks_str);
-    for (int j = 0; j < pk_zero_ixs_ix; j++)
-      peaks << pk_zero_dev_ixs[j] << " 3.0" << endl;
+    for (int j = 0; j < pk_zero_ixs_ix; j++) {
+      int i = pk_zero_dev_ixs[j];
+      peaks << i << " " << x[i] << endl;
+    }
     peaks.close();
 
     ofstream troughs(troughs_str);
-    for (int j = 0; j < tr_zero_ixs_ix; j++)
-      troughs << tr_zero_dev_ixs[j] << " -3.0" << endl;
+    for (int j = 0; j < tr_zero_ixs_ix; j++) {
+      int i = tr_zero_dev_ixs[j];
+      troughs << i << " " << x[i] << endl;
+    }
     troughs.close();
 }
   
@@ -609,9 +613,10 @@ int main(int argc, char *argv[]) {
   cmds << "set size " << large_width << ", " << height << endl;
   cmds << "set xrange[-1:" << n << "]" << endl;
   cmds << "set yrange[-3:3]" << endl;
-  cmds << "plot '" << data_str << "' with lines, '"
-       << peaks_str << "' with impulses, '"
-       << troughs_str << "' with impulses" << endl;
+  cmds << "plot '"
+       << troughs_str << "' with points pt 11, '"
+       << peaks_str << "' with points pt 9, '"
+       << data_str << "' with lines lt -1 lw 1" << endl;
   cmds << "unset multiplot" << endl;
   cmds.close();
   
