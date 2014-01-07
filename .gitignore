@@ -1,8 +1,10 @@
-# .gitignore rev. 02 January 2014 by Stuart Ambler.
+# .gitignore rev. 06 January 2014 by Stuart Ambler.
 # Copyright (c) 2014 Stuart Ambler.
 # Distributed under the Boost License in the accompanying file LICENSE.
 
 *~
 README.html
 ampd
+ampd-arm
 /test
+/dlib-18.5
