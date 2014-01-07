@@ -9,6 +9,9 @@ as in An Efficient Algorithm for Automatic Peak Detection in Noisy Periodic and
 Quasi-Periodic Signals, by Felix Scholkmann, Jens Boss and Martin Wolf,
 Algorithms 2012, 5, 588-603.
 
+ampd-arm.cc is the same except it uses Mat, Col, etc. from the Armadillo 18.5
+C++ library rather than using std::valarray etc.
+
 The code uses some C++ 11 syntax and was compiled with gcc 4.8.1.  It includes a
 main function with a number of parameters for generation of test data and a few
 parameters for operation of algorithm.  The test outputs command and data files
