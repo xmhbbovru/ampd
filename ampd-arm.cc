@@ -99,7 +99,6 @@
 #include <iostream>
 #include <limits>
 #include <sstream>
-#include <valarray>
 
 #include <armadillo>
 #include <argtable2.h>

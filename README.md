@@ -1,4 +1,4 @@
-README.md rev. 02 January 2014 by Stuart Ambler.
+README.md rev. 06 January 2014 by Stuart Ambler.
 Copyright (c) 2014 Stuart Ambler.
 Distributed under the Boost License in the accompanying file LICENSE.
 
@@ -9,7 +9,7 @@ as in An Efficient Algorithm for Automatic Peak Detection in Noisy Periodic and
 Quasi-Periodic Signals, by Felix Scholkmann, Jens Boss and Martin Wolf,
 Algorithms 2012, 5, 588-603.
 
-ampd-arm.cc is the same except it uses Mat, Col, etc. from the Armadillo 18.5
+ampd-arm.cc is the same except it uses Mat, Col, etc. from the Armadillo 4.000.0
 C++ library rather than using std::valarray etc.
 
 The code uses some C++ 11 syntax and was compiled with gcc 4.8.1.  It includes a
@@ -20,6 +20,10 @@ intel processor, 8 GB RAM.  Requires installation of argtable2; tested with
 version 12-1.  Build script usage:
 
 buildcc11 ampd
+
+or
+
+buildcc11arm ampd-arm
 
 Since the program writes a number of output files with long filenames including
 all the command line parameters or defaults used, it may be best to create a
